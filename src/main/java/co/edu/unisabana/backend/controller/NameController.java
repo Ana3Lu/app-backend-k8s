@@ -10,6 +10,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/names")
 @RequiredArgsConstructor
+@CrossOrigin(origins = "*")
 public class NameController {
     private final NameService nameService;
 

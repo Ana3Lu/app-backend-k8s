@@ -15,6 +15,6 @@ public class NameService {
     public List<Name> getNames() { return nameRepository.findAll(); }
 
     public Name saveName(String name) {
-        return nameRepository.save(name);
+        return nameRepository.save(new Name(name));
     }
 }
