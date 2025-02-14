@@ -1,0 +1,25 @@
+package co.edu.unisabana.backend.model;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Entity
+@Table(name = "names")
+@NoArgsConstructor
+public class Name {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Getter
+    @Setter
+    private String value;
+
+    public Name(String value) {
+        this.value = value;
+    }
+}

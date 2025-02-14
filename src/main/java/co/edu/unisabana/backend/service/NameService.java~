@@ -1,0 +1,22 @@
+package co.edu.unisabana.backend.service;
+
+import co.edu.unisabana.backend.entity.Name;
+import co.edu.unisabana.backend.repository.NameRepository;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+public class NameService {
+    private final NameRepository nameRepository;
+
+    public NameService(NameRepository nameRepository) {
+        this.nameRepository = nameRepository;
+    }
+
+    public List<Name> getAllNames() { return nameRepository.findAll(); }
+
+    public Name saveName(String value) {
+        return nameRepository.save(new Name(value));
+    }
+}
