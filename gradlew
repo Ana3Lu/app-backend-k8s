@@ -26,7 +26,7 @@
 #
 #   (1) You need a POSIX-compliant shell to run this script. If your /bin/sh is
 #       noncompliant, but you have some other compliant shell such as ksh or
-#       bash, then to run this script, type that shell name before the whole
+#       bash, then to run this script, type that shell value before the whole
 #       command line, like:
 #
 #           ksh Gradle
@@ -89,7 +89,7 @@ APP_BASE_NAME=${0##*/}
 APP_HOME=$( cd -P "${APP_HOME:-./}" > /dev/null && printf '%s
 ' "$PWD" ) || exit
 
-# Use the maximum available, or set MAX_FD != -1 to use that name.
+# Use the maximum available, or set MAX_FD != -1 to use that value.
 MAX_FD=maximum
 
 warn () {
@@ -164,7 +164,7 @@ fi
 
 # Collect all arguments for the java command, stacking in reverse order:
 #   * args from the command line
-#   * the main class name
+#   * the main class value
 #   * -classpath
 #   * -D...appname settings
 #   * --module-path (only if needed)
