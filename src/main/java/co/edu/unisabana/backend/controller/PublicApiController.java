@@ -8,7 +8,6 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/names")
-@CrossOrigin(origins = "*")
 public class PublicApiController {
 
     private final RestTemplate restTemplate = new RestTemplate();
