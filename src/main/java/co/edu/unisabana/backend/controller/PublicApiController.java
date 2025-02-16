@@ -20,10 +20,7 @@ public class PublicApiController {
     }
 
     @PostMapping
-    public Map<String, Object> saveName(@RequestBody Map<String, Object> request) {
-        Map<String, Object> newRequest = new HashMap<>();
-        newRequest.put("value", request.get("name")); // Mapea 'name' a 'value'
-
-        return restTemplate.postForObject(internalApiUrl, newRequest, Map.class);
+    public Map<String, Object> saveName(@RequestBody Map<String, Object> name) {
+        return restTemplate.postForObject(internalApiUrl, name, Map.class);
     }
 }
