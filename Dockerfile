@@ -2,7 +2,8 @@
 FROM openjdk:17-jdk-slim AS build
 WORKDIR /app
 COPY . .
-RUN ./gradlew bootJar # Compila la aplicación dentro del contenedor
+RUN chmod +x ./gradlew  # Da permisos de ejecución a gradlew
+RUN ./gradlew bootJar   # Compila la aplicación dentro del contenedor
 
 # Imagen final
 FROM openjdk:17-jdk-slim
