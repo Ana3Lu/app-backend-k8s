@@ -14,7 +14,7 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("https://kubernetes-400q1hm8w-juan-cetinas-projects.vercel.app/")
+                        .allowedOrigins("http://152.42.154.220", "https://kubernetes-83j6uq10p-juan-cetinas-projects.vercel.app")
                         .allowedMethods("GET", "POST", "PUT", "DELETE")
                         .allowedHeaders("*")
                         .allowCredentials(true);
