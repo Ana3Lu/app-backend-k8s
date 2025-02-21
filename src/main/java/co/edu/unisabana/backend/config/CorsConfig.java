@@ -14,7 +14,7 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("http://152.42.154.220", "https://k8s-patrones.vercel.app", "http://apik8s.duckdns.org")
+                        .allowedOrigins("https://k8s-patrones.vercel.app", "https://apik8s.duckdns.org")
                         .allowedMethods("GET", "POST", "PUT", "DELETE")
                         .allowedHeaders("*")
                         .allowCredentials(true);
