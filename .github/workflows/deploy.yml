@@ -40,6 +40,8 @@ jobs:
           tags: ${{ github.sha }}
           registry: docker.io
           dockerfile: Dockerfile
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Clone Helm Manifests Repository (main branch)
         run: |
