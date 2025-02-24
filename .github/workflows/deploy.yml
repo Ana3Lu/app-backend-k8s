@@ -55,7 +55,7 @@ jobs:
 
       - name: Commit and Push updated values.yaml to helm-manifiestos
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
         run: |
           cd helm-manifiestos
           git config --local user.email "action@github.com"
