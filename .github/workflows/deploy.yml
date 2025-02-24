@@ -55,13 +55,14 @@ jobs:
           cd helm-manifiestos/helm-chart-api/public-api
           yq eval '.image.tag = "${{ github.sha }}"' -i values.yaml
 
-      - name: Commit and Push updated values.yaml to helm-manifiestos
+      - name: Commit and Push updated values.yaml to k8s-manifests
         env:
           GITHUB_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
         run: |
           cd helm-manifiestos
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
+          git remote set-url origin https://x-access-token:${{ secrets.GH_ACCESS_TOKEN }}@github.com/Ana3Lu/k8s-manifests.git
           git add helm-chart-api/public-api/values.yaml
           git commit -m "Update image tag in Helm values.yaml to ${{ github.sha }}"
           git push origin ${{ env.BRANCH_HELM }}
