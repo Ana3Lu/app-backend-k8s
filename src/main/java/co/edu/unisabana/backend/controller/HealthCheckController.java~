@@ -1,0 +1,4 @@
+package co.edu.unisabana.backend.controller;
+
+public class HealthCheckController {
+}
